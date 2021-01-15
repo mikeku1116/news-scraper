@@ -7,7 +7,7 @@ class InsideSpider(scrapy.Spider):
     start_urls = ['https://www.inside.com.tw/tag/ai']
 
     def parse(self, response):
-        titles = response.css("h3.post_title a::text").getall()
+        urls = response.css("a.js-auto_break_title::attr(href)").getall()
 
-        for title in titles:
-            print(title)
+        for url in urls:
+            print(url)
