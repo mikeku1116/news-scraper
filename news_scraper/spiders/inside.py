@@ -8,7 +8,7 @@ class InsideSpider(scrapy.Spider):
 
     def parse(self, response):
         titles = response.xpath(
-            "//div[@class='post_list_item_content']/h3[@class='post_title']/a/text()").getall()
+            "//a[@class='js-auto_break_title']/@href").getall()
 
         for title in titles:
             print(title)
