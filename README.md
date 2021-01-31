@@ -16,4 +16,6 @@
 
 * [[Scrapy教學6]解析如何在Scrapy框架存入資料到MySQL教學](https://www.learncodewithmike.com/2021/01/writing-data-to-mysql-in-scrapy.html)
 
+* [[Scrapy教學7]教你Scrapy框架匯出CSV檔案方法提升資料處理效率](https://www.learncodewithmike.com/2021/01/scrapy-export-csv-files.html)
+
 
