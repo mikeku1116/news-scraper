@@ -63,7 +63,7 @@ DOWNLOAD_DELAY = 1
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'news_scraper.pipelines.NewsScraperPipeline': 300,
+    'news_scraper.pipelines.CsvPipeline': 500,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -91,3 +91,4 @@ MYSQL_HOST = 'localhost'
 MYSQL_DATABASE = 'insidedb'
 MYSQL_USERNAME = 'root'
 MYSQL_PASSWORD = '***'
+
