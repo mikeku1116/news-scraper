@@ -8,6 +8,20 @@ class InsideSpider(scrapy.Spider):
 
     def parse(self, response):
 
+        yield from self.scrape(response)  # 爬取網頁內容
+
+        # 定位「下一頁」按鈕元素
+        next_page_url = response.xpath(
+            "//a[@class='pagination_item pagination_item-next']/@href")
+
+        if next_page_url:
+
+            url = next_page_url.get()  # 取得下一頁的網址
+
+            yield scrapy.Request(url, callback=self.parse)  # 發送請求
+
+    def scrape(self, response):
+
         # 爬取文章標題
         post_titles = response.xpath(
             "//h3[@class='post_title']/a[@class='js-auto_break_title']/text()"
@@ -29,4 +43,5 @@ class InsideSpider(scrapy.Spider):
                 "post_date": data[1],
                 "post_author": data[2]
             }
+
             yield NewsScraperItem
