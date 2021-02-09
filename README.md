@@ -18,4 +18,6 @@
 
 * [[Scrapy教學7]教你Scrapy框架匯出CSV檔案方法提升資料處理效率](https://www.learncodewithmike.com/2021/01/scrapy-export-csv-files.html)
 
+* [[Scrapy教學8]詳解Scrapy框架爬取分頁資料的實用技巧](https://www.learncodewithmike.com/2021/02/scraping-multiple-pages-with-scrapy.html)
+
 
