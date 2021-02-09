@@ -5,6 +5,7 @@ class InsideSpider(scrapy.Spider):
     name = 'inside'
     allowed_domains = ['www.inside.com.tw']
     start_urls = ['https://www.inside.com.tw/tag/ai']
+    count = 1  # 執行次數
 
     def parse(self, response):
 
@@ -18,7 +19,10 @@ class InsideSpider(scrapy.Spider):
 
             url = next_page_url.get()  # 取得下一頁的網址
 
-            yield scrapy.Request(url, callback=self.parse)  # 發送請求
+            InsideSpider.count += 1
+
+            if InsideSpider.count <= 3:
+                yield scrapy.Request(url, callback=self.parse)  # 發送請求
 
     def scrape(self, response):
 
