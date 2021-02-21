@@ -62,9 +62,9 @@ DOWNLOAD_DELAY = 1
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-# ITEM_PIPELINES = {
-#     'news_scraper.pipelines.CsvPipeline': 500,
-# }
+ITEM_PIPELINES = {
+    'news_scraper.pipelines.CsvPipeline': 500,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
@@ -87,10 +87,16 @@ DOWNLOAD_DELAY = 1
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-MYSQL_HOST = 'localhost'
-MYSQL_DATABASE = 'insidedb'
-MYSQL_USERNAME = 'root'
-MYSQL_PASSWORD = '***'
+# MYSQL_HOST = 'localhost'
+# MYSQL_DATABASE = 'insidedb'
+# MYSQL_USERNAME = 'root'
+# MYSQL_PASSWORD = '***'
 
-FEED_EXPORT_ENCODING = 'big5'
-FEED_EXPORT_FIELDS = ['post_title', 'post_date', 'post_author']
+# FEED_EXPORT_ENCODING = 'big5'
+# FEED_EXPORT_FIELDS = ['post_title', 'post_date', 'post_author']
+
+MAIL_HOST = "smtp.gmail.com"
+MAIL_PORT = 587
+MAIL_FROM = "申請Gmail應用程式密碼所使用的電子郵件帳號"
+MAIL_PASS = "Gmail應用程式密碼"
+MAIL_TLS = True  # 開啟安全連線

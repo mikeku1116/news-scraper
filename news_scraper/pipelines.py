@@ -9,6 +9,7 @@ from itemadapter import ItemAdapter
 from news_scraper import settings
 import pymysql
 from scrapy.exporters import CsvItemExporter
+from scrapy.mail import MailSender
 
 
 class NewsScraperPipeline:
@@ -53,3 +54,19 @@ class CsvPipeline:
     def close_spider(self, spider):
         self.exporter.finish_exporting()
         self.file.close()
+
+        mail = MailSender(smtphost=settings.MAIL_HOST,
+                          smtpport=settings.MAIL_PORT,
+                          smtpuser=settings.MAIL_FROM,
+                          smtppass=settings.MAIL_PASS,
+                          smtptls=settings.MAIL_TLS)
+
+        attach_name = "posts.csv"  # 附件的顯示名稱
+        mime_type = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        file_object = open("posts.csv", "rb")
+
+        # 寄出郵件
+        return mail.send(to=["example@gmail.com"],  # 收件者
+                         subject="news",  # 郵件標題
+                         body="",  # 郵件內容
+                         attachs=[(attach_name, mime_type, file_object)])  # 附件
