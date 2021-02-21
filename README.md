@@ -20,6 +20,6 @@
 
 * [[Scrapy教學8]詳解Scrapy框架爬取分頁資料的實用技巧](https://www.learncodewithmike.com/2021/02/scraping-multiple-pages-with-scrapy.html)
 
-* [[Scrapy教學9]一定要懂的Scrapy框架結合Gmail寄送爬取資料檔案秘訣](https://www.learncodewithmike.com/2021/02/scrapy-sending-gmail.html)
+* [[Scrapy教學9]一定要懂的Scrapy框架結合Gmail寄送爬取資料附件秘訣](https://www.learncodewithmike.com/2021/02/scrapy-sending-gmail.html)
 
 
