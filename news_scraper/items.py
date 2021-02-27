@@ -12,3 +12,8 @@ class NewsScraperItem(scrapy.Item):
     post_title = scrapy.Field()
     post_date = scrapy.Field()
     post_author = scrapy.Field()
+
+
+class HotNewsItem(scrapy.Item):
+    hot_news_title = scrapy.Field()
+    hot_news_intro = scrapy.Field()
