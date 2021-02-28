@@ -22,4 +22,6 @@
 
 * [[Scrapy教學9]一定要懂的Scrapy框架結合Gmail寄送爬取資料附件秘訣](https://www.learncodewithmike.com/2021/02/scrapy-sending-gmail.html)
 
+* [[Scrapy教學10]不可不知的Scrapy框架爬取下一層網頁資料實作](https://www.learncodewithmike.com/2021/02/scrapy-follow-links-and-collect-data.html)
+
 
